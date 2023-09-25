@@ -19,7 +19,7 @@ function Home() {
       <div className="cardSection">
           <h1>What We Do</h1>
         <div className="cardContainer">
-          <Link to="/whatwedo#section3">
+          <Link to="/whatwedo#section4">
             <div className="card"> 
                 <h2>Business Consulting</h2>
                 <p>Achieve organizational growth, efficiency, and competitiveness. Our approach enables you to navigate challenges and seize opportunities in an ever-changing financial landscape.</p>

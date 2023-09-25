@@ -1,17 +1,18 @@
- 
-  /* Styles for the services and case studies section */
-  .caseStudies {
+.caseStudies2 {
     padding: 20px;
+    background-color: #F1F5F9;
   }
   
   .service {
     margin-bottom: 30px;
+    margin-left: 100px;
   }
   
   .service h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333333;
+    font-size: 38px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+    color: #003F63;
   }
   
   .caseStudiesList {
@@ -21,81 +22,56 @@
   }
   
   .caseStudy {
-    width: calc(20% - 10px); /* Adjust for your desired column layout */
+    width: calc(20% - 100px);
+    height: 140px;
     padding: 20px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
+    border: 4px solid #90d83e;
+    border-radius: 10px;
     background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+  }
+  
+  .caseStudy:hover {
+    background-color: #e2ffff; /* Change to a primary color on hover */
+    transform: translateY(-5px);
+    box-shadow: 0px 24px 60px #e2ffff; /* Enhance shadow on hover */
   }
   
   .caseStudy h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #333333;
+    font-size: 24px;
+    color: #90d83e; /* Use a bright green color for case study titles */
   }
   
   .caseStudy p {
-    font-size: 16px;
-    color: #666666;
+    font-size: 18px;
+    color: #333333;
   }
-  
-  /* Button styles (for displaying the form) */
-  .requestButton {
-    background-color: #0094CB;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .requestButton:hover {
-    background-color: #00749E;
-  }
-  
-  /* Form styles (customize as needed) */
-  .formContainer {
-    display: none; /* Hide the form by default */
-    justify-content: center;
-    align-items: center;
+
+  .modalOverlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the modal is above other content */
   }
   
-  .form {
-    background-color: #ffffff;
+  /* Modal Content Styles */
+  .modalContent {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
   }
   
-  .form input {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .form button {
-    background-color: #0094CB;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .form button:hover {
-    background-color: #00749E;
-  }
   
   /* Responsive styles (customize as needed) */
   @media screen and (max-width: 768px) {
@@ -109,3 +85,5 @@
       width: 100%;
     }
   }
+
+  

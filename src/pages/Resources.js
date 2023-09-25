@@ -1,111 +1,107 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/Resources.css';
 import BannerImage from '../assets/gradient.png';
+import CaseStudyForm from '../components/CaseStudyForm';
 
 function Resources() {
   // Sample case studies data organized by service
   const services = [
     {
-      name: 'Service 1',
+      name: 'Business Consulting',
       caseStudies: [
         {
-          title: 'Case Study 1',
-          description: 'Description of Case Study 1...',
+          title: 'Credit Department Reorganization',
         },
         {
-          title: 'Case Study 2',
-          description: 'Description of Case Study 2...',
+          title: 'Risk Management - Implement Three Lines of Défense',
         },
         {
-          title: 'Case Study 2',
-          description: 'Description of Case Study 2...',
+          title: 'Organization Readiness - Dodd Frank Act',
         },
         {
-          title: 'Case Study 2',
-          description: 'Description of Case Study 2...',
+          title: 'Business Operations Technology Strategic',
         },
         // Add more case studies for Service 1
       ],
     },
     {
-      name: 'Service 2',
+      name: 'Digital Transformation',
       caseStudies: [
         {
-          title: 'Case Study 3',
-          description: 'Description of Case Study 3...',
+          title: 'Digital Bank Supervision',
         },
         {
-          title: 'Case Study 4',
-          description: 'Description of Case Study 4...',
+          title: 'Digitized End to End Processes - Implement New Law',
         },
         {
-          title: 'Case Study 4',
-          description: 'Description of Case Study 4...',
+          title: 'Born Digital Stays Digital',
         },
         {
-          title: 'Case Study 4',
-          description: 'Description of Case Study 4...',
+          title: 'Robotics Process Automation COE',
         },
         {
-          title: 'Case Study 4',
-          description: 'Description of Case Study 4...',
+          title: 'Advanced Analytics',
         },
         {
-          title: 'Case Study 4',
-          description: 'Description of Case Study 4...',
+          title: 'Large Data Management',
         },
         // Add more case studies for Service 2
       ],
     },
     {
-      name: 'Service 2',
+      name: 'Product Management',
       caseStudies: [
         {
-          title: 'Case Study 3',
-          description: 'Description of Case Study 3...',
+          title: 'Product Led Organization',
         },
         {
-          title: 'Case Study 4',
-          description: 'Description of Case Study 4...',
+          title: 'Branch Operations Redesign',
         },
         {
-          title: 'Case Study 4',
-          description: 'Description of Case Study 4...',
+          title: 'Loan Origination Technology Modernization',
         },
         {
-          title: 'Case Study 4',
-          description: 'Description of Case Study 4...',
+          title: 'Application Rationalization',
         },
         {
-          title: 'Case Study 4',
-          description: 'Description of Case Study 4...',
+          title: 'Board Business Cases',
         },
         // Add more case studies for Service 2
       ],
     },
     {
-      name: 'Service 2',
+      name: 'Agile Program / Project Management',
       caseStudies: [
         {
-          title: 'Case Study 3',
-          description: 'Description of Case Study 3...',
+          title: 'Enterprise Project/Portfolio Management',
         },
         {
-          title: 'Case Study 4',
-          description: 'Description of Case Study 4...',
+          title: 'Information Security PMO',
         },
         {
-          title: 'Case Study 4',
-          description: 'Description of Case Study 4...',
+          title: 'Agile Transformation',
         },
         {
-          title: 'Case Study 4',
-          description: 'Description of Case Study 4...',
+          title: 'Independent Verification and Validation (IV&V)',
         },
         // Add more case studies for Service 2
       ],
     },
   ];
+
+  const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
+  const [isFormVisible, setFormVisible] = useState(false);
+  const closeModal = () => {
+    setFormVisible(false);
+  };
+
+  // Handle form submission, send email, and close the form
+  const handleSubmitForm = (formData) => {
+    console.log('Form submitted:', formData);
+
+  };
+
+  
 
   return (
     <div>
@@ -115,22 +111,39 @@ function Resources() {
           <p>Explore our case studies by service.</p>
         </div>
       </div>
-      <div className="caseStudies">
+      <div className="caseStudies2">
         {services.map((service, index) => (
           <div className="service" key={index}>
             <h2>{service.name}</h2>
             <div className="caseStudiesList">
               {service.caseStudies.map((caseStudy, caseIndex) => (
-                <div className="caseStudy" key={caseIndex}>
+                <div
+                  className="caseStudy"
+                  key={caseIndex}
+                  onClick={() => {
+                    setSelectedCaseStudy(caseStudy);
+                    setFormVisible(true);
+                  }}
+                >
                   <h3>{caseStudy.title}</h3>
-                  <p>{caseStudy.description}</p>
-                  {/* Add a button here to handle form display */}
                 </div>
               ))}
             </div>
           </div>
         ))}
       </div>
+      {/* Display the form if a case study is selected */}
+      {isFormVisible && (
+        <div className="modalOverlay" onClick={closeModal}>
+          <div className="modalContent" onClick={(e) => e.stopPropagation()}>
+            <CaseStudyForm
+              selectedCaseStudy={selectedCaseStudy}
+              onClose={closeModal}
+              onSubmit={handleSubmitForm}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
