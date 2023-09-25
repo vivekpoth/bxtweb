@@ -1,0 +1,65 @@
+
+.cardSection {
+    background-color: #003F63;
+    padding: 50px 0;
+  }
+  
+  .cardSection h1{
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .cardContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1600px;
+  }
+  
+  .card {
+    width: 300px;
+    height: 340px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 100px 300px rgba(255, 255, 255, 0.1);
+    font-family: "Helvetica", sans-serif; /* Use the Helvetica font */
+    cursor: pointer; /* Change cursor to indicate the element is clickable */
+    transition: transform 0.2s, box-shadow 0.2s; /* Add smooth transitions */
+    text-align: center;
+  }
+  
+  .card h2 {
+    font-size: 31px;
+    margin-bottom: 10px;
+    color: #000000;
+  }
+  
+  .card h3 {
+    font-size: 18px;
+    color: #75C11D;
+  }
+  
+  .card p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #000000;
+  }
+  
+  .cardContainer a {
+    text-decoration: none; /* Remove underlines */
+    color: inherit; /* Inherit the color from parent */
+  }
+
+  .card:hover {
+    background-color: #D1FAFF;
+    transform: translateY(-5px); /* Apply a slight lift effect on hover */
+    box-shadow: 0px 24px 60px rgba(255, 255, 255, 0.2); /* Add shadow on hover */
+  }
+

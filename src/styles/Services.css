@@ -1,0 +1,88 @@
+.servicePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.serviceContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1600px;
+  width: 100%;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+
+@media (max-width: 768px) {
+  .serviceContainer {
+    flex-direction: column-reverse;
+  }
+}
+
+.serviceContent {
+  flex: 1;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.serviceContent h1 {
+  font-size: 38px;
+}
+
+.serviceContent p {
+  font-size: 18px;
+}
+
+/* Rest of your service content styles... */
+
+.serviceImage {
+  flex: 1;
+  max-width: 50%;
+  margin-left: 20px;
+}
+
+.serviceImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add media query for smaller screens if needed */
+@media (max-width: 480px) {
+  .serviceImage {
+    margin: 20px auto;
+    max-width: 100%;
+  }
+}
+
+.caseStudiesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: -100px;
+  margin-bottom: 50px;
+}
+
+/* Style the individual case study links with spacing */
+.caseStudies a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #0077b6;
+  color: #fff;
+  border-radius: 20px;
+  margin: 10px; /* Add vertical spacing between links */
+  font-weight: bold;
+}
+
+/* Style the hover effect for the links */
+.caseStudies a:hover {
+  background-color: #75C11D;
+  transition: background-color 0.3s ease;
+}
+

@@ -1,0 +1,48 @@
+.joinUsPage {
+    background-color: #F1F5F9; /* Set your desired background color */
+    padding: 40px;
+    text-align: center;
+  }
+
+  .joinUsPage h1 {
+    font-size: 26px;
+    color: #000000; /* Set your desired text color */
+    margin-bottom: 20px;
+  }
+  
+  .joinUsContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Set your desired background color */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .joinUsContainer h1 {
+    font-size: 28px;
+    color: #333; /* Set your desired text color */
+    margin-bottom: 20px;
+    
+  }
+  
+  .joinUsContainer h2 {
+    font-size: 24px;
+    color: #333; /* Set your desired text color */
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .joinUsContainer p {
+    font-size: 18px;
+    color: #000000; /* Set your desired text color */
+    margin-bottom: 15px;
+  }
+  
+  .joinUsContainer ul {
+    font-size: 18px;
+    color: #000000; /* Set your desired text color */
+    margin-left: 20px;
+  }
+  

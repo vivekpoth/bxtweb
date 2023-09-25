@@ -1,0 +1,52 @@
+.footer {
+  background-color: #003F63; /* Choose your background color */
+  color: #fff; /* Choose your text color */
+  padding: 40px 0; /* Adjust padding as needed */
+}
+
+/* Footer content layout */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Footer sections */
+.footer-section {
+  width: 48%; /* Adjust width as needed for your layout */
+}
+
+/* Footer headings */
+.footer-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Footer links */
+.footer-section a {
+  color: #0094CB; /* Choose link color */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #75C11D; /* Choose link hover color */
+}
+
+/* Adjust spacing and fonts as needed */
+.footer-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Responsive layout for smaller screens */
+@media only screen and (max-width: 768px) {
+  .footer-section {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 30px; /* Adjust spacing as needed */
+  }
+}

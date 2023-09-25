@@ -1,0 +1,146 @@
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Left side of the navbar */
+.navbar .leftSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 150px;
+}
+
+/* Logo styling */
+.navbar .leftSide img {
+  width: 200px;
+}
+
+/* Right side of the navbar */
+.navbar .rightSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for the right side links */
+.navbar .rightSide a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  transition: color 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+/* Hover effect for right side links */
+.navbar .rightSide a:hover {
+  color: #0094CB; /* Change to the desired hover color */
+  border-bottom: 2px solid #0094CB
+}
+
+/* Styling for the button */
+.navbar .rightSide button {
+  background-color: transparent;
+  border: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/* Styling for the button icon */
+.navbar .rightSide svg {
+  font-size: 40px;
+  transition: transform 0.3s;
+}
+
+/* Hover effect for the button icon */
+.navbar .rightSide button:hover svg {
+  transform: scale(1.2); /* Change scale value as desired */
+}
+
+/* Open and close states for the navbar */
+.navbar #open {
+  padding-left: 0px;
+}
+.navbar #open img {
+  display: none;
+}
+
+.navbar #close img {
+  display: inherit;
+}
+
+.navbar #open .hiddenLinks {
+  display: inherit;
+  margin-left: 30px;
+}
+
+.navbar #close .hiddenLinks {
+  display: none;
+}
+
+.navbar #open a {
+  width: 70px;
+  margin: 5px;
+}
+
+.navbar .hiddenLinks a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 2px solid transparent; /* Initially no underline */
+}
+
+/* Hover effect for hidden links */
+.navbar .hiddenLinks a:hover {
+  color: #0094CB; /* Change to the desired hover color */
+  border-bottom: 2px solid #0094CB; /* Add underline on hover */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 900px) {
+  .navbar .rightSide a {
+    width: 70px;
+  }
+  .navbar .leftSide {
+    padding-left: 50px;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar .rightSide a {
+    display: none;
+  }
+
+  .navbar .rightSide {
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+
+  .navbar .rightSide button {
+    display: inherit;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar .rightSide button {
+    display: none;
+  }
+
+  .hiddenLinks {
+    display: none;
+  }
+
+  
+}
