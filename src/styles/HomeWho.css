@@ -1,64 +1,64 @@
 .who {
-    padding: 50px 10px;
-    background-color: #F1F5F9
-  }
-  
-  .who h1 {
-    font-size: 50px;
-    color: #003F63;
-    margin-bottom: 50px;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .cardWho {
-    width: 400px;
-    background-color: #0094CB;
-    padding: 20px;
-    margin: 20px 50px 40px;
-    border-radius: 10px;
-    box-shadow: 0px 100px 300px rgba(255, 255, 255, 0.1);
-    font-family: "Helvetica", sans-serif;
-    text-align: center;
-  }
-  
-  .cardWhoContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: auto;
-    max-width: 1600px;
-  }
-  
-  .cardWho h2 {
-    font-size: 42px;
-    color: #ffffff;
-  }
-  
-  .who p {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #003F63;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .cardWho p {
-    font-size: 24px;
-    font-weight: normal;
-    margin-bottom: 30px;
-    color: #ffffff;
-  }
+  padding: 50px 10px;
+  background-color: #F1F5F9
+}
 
-  .whybxt {
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 80%; /* Use 'contain' instead of 'cover' */
-  }
+.who h1 {
+  font-size: 50px;
+  color: #003F63;
+  margin-bottom: 50px;
+  align-items: center;
+  text-align: center;
+}
+
+.cardWho {
+  width: 400px;
+  background-color: #0094CB;
+  padding: 20px;
+  margin: 20px 50px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 100px 300px rgba(255, 255, 255, 0.1);
+  font-family: "Helvetica", sans-serif;
+  text-align: center;
+}
+
+.cardWhoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 1600px;
+}
+
+.cardWho h2 {
+  font-size: 42px;
+  color: #ffffff;
+}
+
+.who p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #003F63;
+  align-items: center;
+  text-align: center;
+}
+
+.cardWho p {
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.whybxt {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%; /* Use 'contain' instead of 'cover' */
+}

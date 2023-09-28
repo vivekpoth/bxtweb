@@ -1,18 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../styles/CaseStudyForm.css'
+import axios from 'axios';
+import ReCAPTCHA from "react-google-recaptcha";
 
 function CaseStudyForm({ selectedCaseStudy, onClose, onSubmit }) {
   const [name, setName] = useState('');
   const [company, setCompany] = useState('');
   const [email, setEmail] = useState('');
+  const [verified, setVerified] = useState(false);
+  const captchaRef = useRef();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Send the user's information and selected case study to the server
-    onSubmit({ name, company, email, caseStudy: selectedCaseStudy });
-    // Close the form
-    onClose();
+  //recaptcha function
+  function onChange(value) {
+    setVerified(true);
   };
+
+  const handleSubmit = async (e) => { 
+    e.preventDefault();
+    console.log("1.1");
+
+    const formData = {
+      name,
+      company,
+      email,
+      caseStudy: selectedCaseStudy,
+      captchaValue: captchaRef.current.getValue(),
+    };
+
+    try {
+      // Make a POST request to your backend API
+      console.log("Before POST request");
+      const response = await axios.post('http://localhost:3000/submit-form', formData);
+      console.log("After POST request");
+      // Handle the response (e.g., show a success message)
+      console.log("2");
+      // Close the form
+      onClose();
+    } catch (error) {
+      // Handle errors (e.g., show an error message)
+      console.log("3");
+      console.error('Error submitting form:', error);
+      alert('An error occurred. Please try again.');
+    }
+  };
+
 
   return (
     <div className="caseStudyForm">
@@ -28,7 +59,7 @@ function CaseStudyForm({ selectedCaseStudy, onClose, onSubmit }) {
           />
         </div>
         <div className="form-group">
-          <label>Company Name*:</label>
+          <label>Company Name*</label>
           <input
             type="text"
             value={company}
@@ -45,7 +76,13 @@ function CaseStudyForm({ selectedCaseStudy, onClose, onSubmit }) {
             required
           />
         </div>
-        <button type="submit">Submit</button>
+        <ReCAPTCHA
+          sitekey="6Lfh2lsoAAAAAIhoEMSnw4KEvNR8nyiCRUJ8j1qw"
+          onChange={onChange}
+          ref={captchaRef}
+        />
+        <br></br>
+        <button type="submit" disabled={!verified}>Submit</button>
       </form>
     </div>
   );
