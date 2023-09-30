@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../styles/Resources.css';
 import BannerImage from '../assets/gradient.png';
 import CaseStudyForm from '../components/CaseStudyForm';
@@ -89,12 +90,34 @@ function Resources() {
     },
   ];
 
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const selectedCaseStudyTitle = queryParams.get('caseStudy');
+  const scrollOffset = 100; // Adjust this value to set the desired offset
+
+  useEffect(() => {
+    // Scroll to the top of the page first
+    window.scrollTo(0, 0);
+
+    // Scroll to the selected case study section with an offset
+    if (selectedCaseStudyTitle) {
+      const sectionElement = document.getElementById(selectedCaseStudyTitle);
+
+      if (sectionElement) {
+        const sectionTop = sectionElement.getBoundingClientRect().top;
+        window.scrollTo({
+          top: window.scrollY + sectionTop - scrollOffset,
+          behavior: 'smooth',
+        });
+      }
+    }
+  }, [selectedCaseStudyTitle]);
+
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
   const [isFormVisible, setFormVisible] = useState(false);
   const closeModal = () => {
     setFormVisible(false);
   };
-
   // Handle form submission, send email, and close the form
   const handleSubmitForm = (formData) => {
     console.log('Form submitted:', formData);
@@ -108,7 +131,7 @@ function Resources() {
       <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
         <div className="headerContainer">
           <h1>Resources</h1>
-          <p>Explore our case studies by service.</p>
+          <p>Click to download a case study.</p>
         </div>
       </div>
       <div className="caseStudies2">
@@ -120,6 +143,7 @@ function Resources() {
                 <div
                   className="caseStudy"
                   key={caseIndex}
+                  id={caseStudy.title}
                   onClick={() => {
                     setSelectedCaseStudy(caseStudy);
                     setFormVisible(true);

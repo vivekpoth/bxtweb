@@ -46,10 +46,25 @@ export function Service1() {
             <div className = "caseStudiesContainer"> 
                 <h2> Case Studies </h2>
                 <div className="caseStudies">
-                        <Link to="/resources" className="link-button"> Credit Department Reorganization </Link>
-                        <Link to="/resources" className="link-button"> Risk Management - Implement Three Lines of Défense </Link>
-                        <Link to="/resources" className="link-button"> Organization Readiness - Dodd Frank Act </Link>
-                        <Link to="/resources" className="link-button"> Business Operations Technology Strategic </Link>
+                        <Link to={`/resources?caseStudy=Credit%20Department%20Reorganization`} className="link-button"> Credit Department Reorganization </Link>
+                        <Link
+                        to="/resources?caseStudy=Risk%20Management%20-%20Implement%20Three%20Lines%20of%20Défense"
+                        className="link-button"
+                        >
+                        Risk Management - Implement Three Lines of Défense
+                        </Link>
+                        <Link
+                        to="/resources?caseStudy=Organization%20Readiness%20-%20Dodd%20Frank%20Act"
+                        className="link-button"
+                        >
+                        Organization Readiness - Dodd Frank Act
+                        </Link>
+                        <Link
+                        to="/resources?caseStudy=Business%20Operations%20Technology%20Strategic"
+                        className="link-button"
+                        >
+                        Business Operations Technology Strategic
+                        </Link>
                 </div>       
             </div>
         </div>
@@ -98,12 +113,42 @@ export function Service2() {
             <div className = "caseStudiesContainer"> 
                 <h2> Case Studies</h2>
                 <div className="caseStudies">
-                        <Link to="/resources" className="link-button"> Digital Bank Supervision </Link>
-                        <Link to="/resources" className="link-button"> Digitized End to End Processes - Implement New Law </Link>
-                        <Link to="/resources" className="link-button"> Born Digital Stays Digital </Link>
-                        <Link to="/resources" className="link-button"> Robotics Process Automation COE </Link>
-                        <Link to="/resources" className="link-button"> Advanced Analytics </Link>
-                        <Link to="/resources" className="link-button"> Large Data Management </Link>
+                <Link
+                to="/resources?caseStudy=Digital%20Bank%20Supervision"
+                className="link-button"
+                >
+                Digital Bank Supervision
+                </Link>
+                <Link
+                to="/resources?caseStudy=Digitized%20End%20to%20End%20Processes%20-%20Implement%20New%20Law"
+                className="link-button"
+                >
+                Digitized End to End Processes - Implement New Law
+                </Link>
+                <Link
+                to="/resources?caseStudy=Born%20Digital%20Stays%20Digital"
+                className="link-button"
+                >
+                Born Digital Stays Digital
+                </Link>
+                <Link
+                to="/resources?caseStudy=Robotics%20Process%20Automation%20COE"
+                className="link-button"
+                >
+                Robotics Process Automation COE
+                </Link>
+                <Link
+                to="/resources?caseStudy=Advanced%20Analytics"
+                className="link-button"
+                >
+                Advanced Analytics
+                </Link>
+                <Link
+                to="/resources?caseStudy=Large%20Data%20Management"
+                className="link-button"
+                >
+                Large Data Management
+                </Link>
                 </div>       
             </div>
         </div>
@@ -145,7 +190,6 @@ export function Service3() {
                         <li>Business Case</li>
                         </ul>
                         <h1>#GetTheRightSh!tDone</h1>
-                        <Link to="/resources" className="link-button"> Product Management Case Studies </Link>
                     </div>
                     <div className="serviceImage">
                         <img src={sample} />
@@ -155,11 +199,36 @@ export function Service3() {
             <div className = "caseStudiesContainer"> 
                 <h2> Case Studies </h2>
                 <div className="caseStudies">
-                        <Link to="/resources" className="link-button"> Product Led Organization </Link>
-                        <Link to="/resources" className="link-button"> Branch Operations Redesign </Link>
-                        <Link to="/resources" className="link-button"> Loan Origination Technology Modernization </Link>
-                        <Link to="/resources" className="link-button"> Application Rationalization </Link>
-                        <Link to="/resources" className="link-button"> Board Business Cases </Link>
+                <Link
+                to="/resources?caseStudy=Product%20Led%20Organization"
+                className="link-button"
+                >
+                Product Led Organization
+                </Link>
+                <Link
+                to="/resources?caseStudy=Branch%20Operations%20Redesign"
+                className="link-button"
+                >
+                Branch Operations Redesign
+                </Link>
+                <Link
+                to="/resources?caseStudy=Loan%20Origination%20Technology%20Modernization"
+                className="link-button"
+                >
+                Loan Origination Technology Modernization
+                </Link>
+                <Link
+                to="/resources?caseStudy=Application%20Rationalization"
+                className="link-button"
+                >
+                Application Rationalization
+                </Link>
+                <Link
+                to="/resources?caseStudy=Board%20Business%20Cases"
+                className="link-button"
+                >
+                Board Business Cases
+                </Link>
                 </div>       
             </div>
         </div>
@@ -199,7 +268,6 @@ export function Service4() {
                         <li>Business Analysis</li>
                         </ul>
                         <h1>#GoToMarketTimely</h1>
-                        <Link to="/resources" className="link-button"> Agile Program Management Case Studies </Link>
                     </div>
                     <div className="serviceImage">
                         <img src={sample} />
@@ -209,10 +277,30 @@ export function Service4() {
             <div className = "caseStudiesContainer"> 
                 <h2> Case Studies </h2>
                 <div className="caseStudies">
-                        <Link to="/resources" className="link-button"> Enterprise Project/Portfolio Management </Link>
-                        <Link to="/resources" className="link-button"> Information Security PMO </Link>
-                        <Link to="/resources" className="link-button"> Agile Transformation </Link>
-                        <Link to="/resources" className="link-button"> Independent Verification and Validation (IV&V) </Link>
+                <Link
+                to="/resources?caseStudy=Enterprise%20Project/Portfolio%20Management"
+                className="link-button"
+                >
+                Enterprise Project/Portfolio Management
+                </Link>
+                <Link
+                to="/resources?caseStudy=Information%20Security%20PMO"
+                className="link-button"
+                >
+                Information Security PMO
+                </Link>
+                <Link
+                to="/resources?caseStudy=Agile%20Transformation"
+                className="link-button"
+                >
+                Agile Transformation
+                </Link>
+                <Link
+                to="/resources?caseStudy=Independent%20Verification%20and%20Validation%20(IV&V)"
+                className="link-button"
+                >
+                Independent Verification and Validation (IV&V)
+                </Link>
                 </div>       
             </div>
         </div>

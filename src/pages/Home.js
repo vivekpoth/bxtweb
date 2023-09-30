@@ -47,6 +47,8 @@ function Home() {
             <p className='cardDescription'>Transform into innovative and technology centric business models. Our approach focuses on rapid digital development and deployment, experimentation, and the integration of data, technology, people, and processes to streamline operations and increase revenue.</p>
             <h3>Achieve digital excellence.</h3>
           </div>
+          </Link>
+          <Link to="/whatwedo#section3">
           <div className="card"> 
             <h2>Product Management</h2>
             <img src={ProductManagementImg} alt="Product Management Image" />
@@ -54,6 +56,8 @@ function Home() {
             <p className='cardDescription'>Transform into a product led organization to be more customer focused, agile, innovative and data driven resulting in better outcomes and increased business success.</p>
             <h3>Build the right product.</h3>
           </div>
+          </Link>
+          <Link to="/whatwedo#section4">
           <div className="card"> 
             <h2>Agile Program Management</h2>
             <img src={AgilePMImg} alt="Agile PM Image" />
@@ -61,6 +65,7 @@ function Home() {
             <p className='cardDescription'>Execute strategy and manage change to achieve business objectives. Our approach emphasizes on flexibility, collaboration, and continuous improvement to adapt to change and deliver value quickly and efficiently.</p>
             <h3>Deliver value quickly.</h3>
           </div> 
+          </Link>
         </div>
       </div>
       <div className = "who">
