@@ -4,6 +4,8 @@ import ConsultingImg from '../assets/consultingImg.jpg';
 import DigitalTransformationImg from '../assets/DigitalImg.jpg';
 import ProductManagementImg from '../assets/PMImage.jpg';
 import AgilePMImg from '../assets/AgileIMG.jpg'
+import VisionMissionImg from '../assets/visionmissionimg.jpg'
+import VisionIMG from '../assets/vision.jpg'
 import { Link } from 'react-router-dom'; 
 import '../styles/Home.css';
 import '../styles/Card.css';
@@ -13,6 +15,7 @@ const attributionConsulting = "https://www.freepik.com/free-vector/strategic-con
 const attributionDigitalTransformation = 'https://www.freepik.com/free-vector/innovation-concept-illustration_13717657.htm#page=2&position=2&from_view=author';
 const attributionProductManagement = '';
 const attributionAgilePM = '';
+const attributionVissionMission = "https://www.freepik.com/free-vector/vision-statement-concept-illustration_19949385.htm#query=storyset%20vision&position=7&from_view=search&track=ais";
 
 
 function Home() {
@@ -26,7 +29,9 @@ function Home() {
         </div>
       </div>
       <div className="cardSection">
-        <h1>What We Do</h1>
+        <div class="heading-card-top">
+          <h2>What We Do</h2>
+        </div>
         <div className="cardContainer">
           <div className="card"> 
               <h2>Business Consulting</h2>
@@ -59,22 +64,24 @@ function Home() {
         </div>
       </div>
       <div className = "who">
-        <div>
-          {/* <h1>Who We Are</h1> */}
-          <div id="visionCard" className="cardWhoContainer"> 
-            <div className="cardWho">
+        <div class="heading-card">
+          <h2>Who We Are</h2>
+        </div>
+        <div class = "content">
+          <div className='cards-container'>
+            <div className="cardWho" id="visionCard" >
               <h2>Vision</h2>
+              <img className = 'card-image' src = {VisionIMG}/>
               <p>To be recognized as a leader in helping organizations of all sizes transform into innovative, technology centric and data driven business models</p>
             </div>
-          </div>
-          <div id="missionCard" className="cardWhoContainer"> 
-            <div className="cardWho">
+            <div className="cardWho" id="missionCard">
               <h2>Mission</h2>
+              <img className = 'card-image' src = {VisionMissionImg}/>
               <p>Our mission is to make a long-lasting positive impact on our customers and to build a firm of great leaders that hires, nurtures, and retains exceptional people</p>
             </div>
           </div>
-          {/* <p>We are a unique breed of consultants with experience-based business knowledge, proven delivery skills, and robust technology expertise.</p> */}
         </div>
+        {/* <p>We are a unique breed of consultants with experience-based business knowledge, proven delivery skills, and robust technology expertise.</p> */}
       </div>
       {/* <div className="whybxt" style={{ backgroundImage: `url(${WhyBxt})` }}> </div> */}
       {/* Attribution for the image */}

@@ -1,68 +1,105 @@
 .who {
-    padding: 50px 10px;
-    background: linear-gradient(to bottom, #63a7d4, #114766);
-  }
-  
-  .who h1 {
-    font-size: 50px;
-    color: #FFFFFF;
-    margin-bottom: 50px;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .cardWho {
-    width: 400px;
-    background-color: #003F63;
-    padding: 20px;
-    margin: 20px 50px 40px;
-    border-radius: 10px;
-    box-shadow: 0px 100px 300px rgba(255, 255, 255, 0.1);
-    font-family: "Helvetica", sans-serif;
-    text-align: center;
-  }
-  
-  .cardWhoContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: auto;
-    max-width: 1600px;
+  padding: 50px 15px;
+  background: linear-gradient(to bottom, #63a7d4, #114766);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Center text content */
+  color: #000000;
+}
+
+.who h1 {
+  font-size: 50px;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+}
+
+.heading-card {
+  width: 300px; /* Adjust width as needed */
+  background-color: #003F63;
+  padding: 5px;
+  margin: 20px 0 30px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.heading-card h2 {
+  font-size: 38px;
+  color: #ffffff;
+}
+
+.content {
+  max-width: 1600px;
+}
+
+.cardWho h2 {
+  font-size: 36px; /* Slightly reduce font size */
+}
+
+.cards-container {
+  display: flex;
+  margin: auto
+}
+
+.cardWho {
+  flex-basis: calc(50% - 20px); /* 50% minus margin and padding */
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin: 0 auto; /* Horizontally center the card within the container */
+  margin-bottom: 20px; /* Add margin for spacing between cards */
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+}
+
+.who p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Adjust margin for spacing between paragraphs */
+}
+
+.cardWho p {
+  font-size: 20px; /* Slightly reduce font size */
+  font-weight: normal;
+  margin-bottom: 20px; /* Adjust margin for spacing between paragraphs */
+}
+
+/* Center the side image container with the remaining space on smaller screens */
+@media (max-width: 800px) {
+  .side-image-container {
+    max-width: 100%; /* Allow the image to take full width on small screens */
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 
-  #visionCard {
-    justify-content: left;
+  .cards-container {
+    padding: 0 15px; /* Add some horizontal padding for cards on small screens */
   }
-  
-  .cardWho h2 {
-    font-size: 42px;
-    color: #ffffff;
-  }
-  
-  .who p {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #003F63;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .cardWho p {
-    font-size: 24px;
-    font-weight: normal;
-    margin-bottom: 30px;
-    color: #ffffff;
+}
+
+/* Swap the position of the image and cards on large screens */
+@media (min-width: 1200px) {
+  .content {
+    flex-direction: row; /* Revert to the original order of items for large screens */
+    justify-content: space-between; /* Add space between the image and cards */
   }
 
-  .whybxt {
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 80%; /* Use 'contain' instead of 'cover' */
+  .side-image-container {
+    max-width: 45%; /* Reduce the image width to make space for cards */
   }
+
+  .cards-container {
+    width: 45%; /* Set the width of the cards container */
+    align-items: flex-start; /* Align cards to the top */
+  }
+}

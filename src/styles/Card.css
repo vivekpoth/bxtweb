@@ -13,6 +13,22 @@
   text-align: center;
 }
 
+.heading-card-top {
+  width: 300px;
+  background-color: #003F63;
+  padding: 10px;
+  margin: 20px auto 30px; /* Updated margin for centering */
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.heading-card-top h2 {
+  font-size: 42px;
+  color: #ffffff;
+}
+
+
 .cardContainer {
   display: flex;
   justify-content: space-around;
@@ -43,8 +59,9 @@
 }
 
 .card h3 {
-  font-size: 18px;
+  font-size: 20px;
   color: #75C11D;
+  /* font-size: 25px; */
   
 }
 
