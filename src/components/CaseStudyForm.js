@@ -23,7 +23,7 @@ function CaseStudyForm({ selectedCaseStudy, onClose, onSubmit }) {
       name,
       company,
       email,
-      caseStudy: selectedCaseStudy,
+      caseStudy: selectedCaseStudy.title,
       captchaValue: captchaRef.current.getValue(),
     };
 
