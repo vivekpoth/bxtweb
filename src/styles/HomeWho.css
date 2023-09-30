@@ -1,11 +1,11 @@
 .who {
     padding: 50px 10px;
-    background-color: #F1F5F9
+    background: linear-gradient(to bottom, #63a7d4, #114766);
   }
   
   .who h1 {
     font-size: 50px;
-    color: #003F63;
+    color: #FFFFFF;
     margin-bottom: 50px;
     align-items: center;
     text-align: center;
@@ -13,7 +13,7 @@
   
   .cardWho {
     width: 400px;
-    background-color: #0094CB;
+    background-color: #003F63;
     padding: 20px;
     margin: 20px 50px 40px;
     border-radius: 10px;
@@ -29,6 +29,10 @@
     flex-wrap: wrap;
     margin: auto;
     max-width: 1600px;
+  }
+
+  #visionCard {
+    justify-content: left;
   }
   
   .cardWho h2 {
