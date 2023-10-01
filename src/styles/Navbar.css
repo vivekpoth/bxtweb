@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
   height: 100px;
-  background-color: #ffffff;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
 }
@@ -31,11 +31,11 @@
 
 /* Styling for the right side links */
 .navbar .rightSide a {
-  color: rgb(0, 0, 0);
+  color: #003F63;
   text-decoration: none;
   margin: 20px;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 600;
   transition: color 0.3s;
   border-bottom: 2px solid transparent;
 }
