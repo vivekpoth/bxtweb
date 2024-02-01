@@ -46,7 +46,7 @@ app.post('/submit-form', async (req, res) => {
     secure: false,
     auth: {
       user: /*Sending Email*/,
-      pass: 'qupsqigtolynecxz',
+      pass: '/*Password*/',
     },
   });
 
