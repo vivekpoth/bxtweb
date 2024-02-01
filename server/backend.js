@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 // Middleware to parse JSON data
 app.use(bodyParser.json());
-const RECAPTCHA_SECRET_KEY = '6Lfh2lsoAAAAAI7_GEaeCIKIo_dnIjO1PAYL7oo6';
+const RECAPTCHA_SECRET_KEY = /*reCAPTCHA key here*/;
 // Define an API endpoint for form submission
 app.post('/submit-form', async (req, res) => {
   console.log("1.7");
@@ -45,14 +45,14 @@ app.post('/submit-form', async (req, res) => {
     port: 587,
     secure: false,
     auth: {
-      user: 'bxtweb0@gmail.com',
+      user: /*Sending Email*/,
       pass: 'qupsqigtolynecxz',
     },
   });
 
   const mailOptions = {
-    from: 'bxtweb0@gmail.com',
-    to: 'vnpothineni@gmail.com',
+    from: /*Sending Email*/,
+    to: /*info@ Email*/,
     subject: 'BXT Website Form Submission',
     text: `
       Name: ${name}
