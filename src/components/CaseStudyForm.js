@@ -31,7 +31,7 @@ function CaseStudyForm({ selectedCaseStudy, onClose, onSubmit }) {
     try {
       // Make a POST request to your backend API
       console.log('Before POST request');
-      const response = await axios.post('https://battle-apricot-celery.glitch.me/submit-form', formData);
+      const response = await axios.post(/*Server Endpoint Here*/, formData);
       console.log('After POST request');
       // Handle the response (e.g., show a success message)
       console.log('2');
