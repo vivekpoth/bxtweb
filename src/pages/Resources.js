@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import '../styles/Resources.css';
-import BannerImage from '../assets/gradient.png';
 import CaseStudyForm from '../components/CaseStudyForm';
 
 function Resources() {
@@ -105,8 +104,9 @@ function Resources() {
 
       if (sectionElement) {
         const sectionTop = sectionElement.getBoundingClientRect().top;
+        const offset = 100;
         window.scrollTo({
-          top: window.scrollY + sectionTop - scrollOffset,
+          top: window.scrollY + sectionTop - scrollOffset - offset,
           behavior: 'smooth',
         });
       }
@@ -115,20 +115,23 @@ function Resources() {
 
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
   const [isFormVisible, setFormVisible] = useState(false);
+  const [isSubmitted, setSubmitted] = useState(false); // State to track form submission
+
   const closeModal = () => {
     setFormVisible(false);
+    setSubmitted(false); // Reset the submitted state when closing the form
   };
   // Handle form submission, send email, and close the form
   const handleSubmitForm = (formData) => {
     console.log('Form submitted:', formData);
-
+    setSubmitted(true);
   };
 
   
 
   return (
     <div>
-      <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
+      <div className="home" /*style={{ backgroundImage: `url(${BannerImage})` }}*/>
         <div className="headerContainer">
           <h1>Resources</h1>
           <p>Click to download a case study.</p>
@@ -157,7 +160,8 @@ function Resources() {
         ))}
       </div>
       {/* Display the form if a case study is selected */}
-      {isFormVisible && (
+      {/* Display the form if a case study is selected and not yet submitted */}
+      {isFormVisible && !isSubmitted && (
         <div className="modalOverlay" onClick={closeModal}>
           <div className="modalContent" onClick={(e) => e.stopPropagation()}>
             <CaseStudyForm
@@ -166,6 +170,13 @@ function Resources() {
               onSubmit={handleSubmitForm}
             />
           </div>
+        </div>
+      )}
+
+      {/* Display a thank you message after form submission */}
+      {isSubmitted && (
+        <div className="thankYouMessage">
+          <p>Thank you for submitting! We will contact you soon with the case study.</p>
         </div>
       )}
     </div>

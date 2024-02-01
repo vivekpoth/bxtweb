@@ -1,49 +1,61 @@
 .vismis {
-    width: 100%;
-    display: flex;
-    justify-content: space-between; /* Space between the two sections */
-    align-items: center;
-    padding: 50px 0;
-    background-color: #F1F5F9;
-  }
-  
-  .vision,
-  .mission {
-    width: calc(50% - 20px);
-    padding: 20px;
-    margin: 0 10px; 
-    border-radius: 10px;
-    font-family: "Helvetica", sans-serif;
-    text-align: center;
-    display: flex;  
-    flex-direction: column; /* Vertical alignment */
-    align-items: center; /* Center content horizontally */
-    gap: 15px;
-  }
-  
-  .vision h2,
-  .mission h2 {
-    font-size: 42px;
-    color: #75C11D;
-  }
-  
-  .vision p,
-  .mission p {
-    font-size: 24px;
-    font-weight: normal;
-    margin-bottom: 30px;
-    color: #000000;
-    max-width: 60%; /* Limit width for more vertical arrangement */
-    margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Space between the two sections */
+  align-items: center;
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+.vision,
+.mission {
+  text-align: center;
+  margin-bottom: 0; /* Set margin-bottom to 0 to remove space between sections */
+}
+
+.card-image1 {
+  width: 100%; /* Make sure the image takes 100% width of its container */
+  max-width: 300px; /* Set a maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Adjust as needed for spacing */
+}
+
+.card-image2 {
+  width: 100%; /* Make sure the image takes 100% width of its container */
+  max-width: 400px; /* Set a maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: -50px; /* Adjust as needed for spacing */
+  margin-top: -35px;
+}
+
+.vision h2 {
+  font-size: 42px;
+  color: #75C11D;
+}
+
+.mission h2 {
+  font-size: 42px;
+  color: #0094CB;
+}
+
+
+.vision p,
+.mission p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #000000;
+  max-width: 60%; /* Limit width for more vertical arrangement */
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .vismis {
+    flex-direction: column; /* Revert to horizontal alignment on larger screens */
   }
 
-  @media only screen and (max-width: 768px) {
-    .vismis {
-      flex-direction: column; /* Revert to horizontal alignment on larger screens */
-    }
-  
-    .vision,
-    .mission {
-      width: 100%;
-    }
+  .vision,
+  .mission {
+    width: 100%;
   }
+}

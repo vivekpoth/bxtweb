@@ -3,6 +3,15 @@
   justify-content: center;
   align-items: center;
   padding: 50px;
+  background-color: #F1F5F9;
+}
+
+.servicePage1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #ffffff;
 }
 
 .serviceContainer {
@@ -36,6 +45,17 @@
   font-size: 18px;
 }
 
+.serviceContent li {
+  font-size: 18px;
+}
+
+.attribution {
+  font-size: 10px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color: #D3D3D3;
+}
+
 /* Rest of your service content styles... */
 
 .serviceImage {
@@ -57,7 +77,13 @@
     margin: 20px auto;
     max-width: 100%;
   }
+
+  .serviceContent h1 {
+    font-size: 28px; /* Adjust the font size for smaller screens */
+  }
+
 }
+
 
 .caseStudiesContainer {
   display: flex;
@@ -67,16 +93,37 @@
   padding: 20px;
   margin-top: -100px;
   margin-bottom: 50px;
+  text-align: center; /* Center-align the links */
+  background-color: #F1F5F9;
+}
+
+.caseStudiesContainer1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: -100px;
+  margin-bottom: 50px;
+  text-align: center; /* Center-align the links */
+  background-color: #ffffff;
 }
 
 /* Style the individual case study links with spacing */
+.caseStudies {
+  display: flex;
+  flex-wrap: wrap; /* Allow links to wrap to the next line */
+  justify-content: center;
+  gap: 20px; /* Add horizontal spacing between links */
+  margin: 10px 0; /* Add vertical spacing between rows of links */
+}
+
 .caseStudies a {
   text-decoration: none;
   padding: 10px 20px;
   background-color: #0077b6;
   color: #fff;
   border-radius: 20px;
-  margin: 10px; /* Add vertical spacing between links */
   font-weight: bold;
 }
 

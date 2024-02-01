@@ -15,6 +15,11 @@
 }
 
 /* Footer sections */
+.footer-section1 {
+  width: 48%; /* Adjust width as needed for your layout */
+  text-align: right;
+}
+
 .footer-section {
   width: 48%; /* Adjust width as needed for your layout */
 }
@@ -23,6 +28,7 @@
 .footer-section h2 {
   font-size: 24px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 /* Footer links */
@@ -49,4 +55,9 @@
     width: 100%; /* Full width on smaller screens */
     margin-bottom: 30px; /* Adjust spacing as needed */
   }
+}
+
+.footer-section iframe {
+  width: 100%;
+  max-width: 400px; /* Set a maximum width as needed */
 }

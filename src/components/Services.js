@@ -1,9 +1,11 @@
 import React from 'react';
-import sample from '../assets/gradient.png'; // Replace with the specific image path for each service
 import '../styles/Services.css'; // Your service page specific styles
 import { Link } from 'react-router-dom' 
-
-
+import busconsultingimg from '../assets/young-employees-sitting-office-table-using-laptop-team-work-brainstorming-meeting-concept.jpg';
+import digitransimg from '../assets/rpa-concept-with-blurry-hand-touching-screen.jpg';
+import projmanimg from '../assets/business-people-meeting.jpg';
+import staffimg from '../assets/successful-happy-business-team.jpg';
+import prodmanimg from '../assets/shoulder-shot-business-man-drawing-diagrams-wall-poster.jpg';
 
 export function Service1() {
     return (
@@ -27,7 +29,6 @@ export function Service1() {
                         change models ensuring maximum value is realized using a mix of mindset, people,
                         processes, technology, and data.
                         </p>
-                        <h3>We Cover:</h3>
                         <ul>
                         <li>Strategy and Planning</li>
                         <li>Risk Management</li>
@@ -39,7 +40,7 @@ export function Service1() {
                         <h1>#GrowTheMarket</h1>
                     </div>
                     <div className="serviceImage">
-                        <img src={sample} />
+                        <img src={busconsultingimg} alt="Business Consulting"/>
                     </div>
                 </div>
             </div>
@@ -74,7 +75,7 @@ export function Service1() {
 export function Service2() {
     return (
         <div className="serviceTotal">
-            <div className="servicePage">
+            <div className="servicePage1">
                 <div className ="serviceContainer">
                     <div className="serviceContent">
                         <h1>Digital Transformation</h1>
@@ -94,7 +95,6 @@ export function Service2() {
                         We partner with clients to develop digital strategies, automate, digitize, and drive
                         business value with data.
                         </p>
-                        <h3>We Cover:</h3>
                         <ul>
                         <li>Digital Strategy</li>
                         <li>Intelligent Automation</li>
@@ -105,12 +105,12 @@ export function Service2() {
                         <h1>#GoDigital</h1>
                     </div>
                     <div className="serviceImage">
-                            <img src={sample} />
+                            <img src={digitransimg} alt="Digital Transformation"/>
                     </div>
                 </div>
                 
             </div>
-            <div className = "caseStudiesContainer"> 
+            <div className = "caseStudiesContainer1"> 
                 <h2> Case Studies</h2>
                 <div className="caseStudies">
                 <Link
@@ -180,7 +180,6 @@ export function Service3() {
                         Wherever you are in the transformation, we have the frameworks, tools, experience, and
                         expertise to assist you with following service capabilities.
                         </p>
-                        <h3>We Cover:</h3>
                         <ul>
                         <li>Product Led Organization Transformation</li>
                         <li>Product Portfolio Strategy</li>
@@ -192,7 +191,7 @@ export function Service3() {
                         <h1>#GetTheRightSh!tDone</h1>
                     </div>
                     <div className="serviceImage">
-                        <img src={sample} />
+                        <img src={prodmanimg} alt="Product Management"/>
                     </div>
                 </div>
             </div>
@@ -238,7 +237,7 @@ export function Service3() {
 export function Service4() {
     return (
         <div className="serviceTotal">
-            <div className="servicePage">
+            <div className="servicePage1">
                 <div className ="serviceContainer">
                     <div className="serviceContent">
                         <h1>Agile Program/Project Management</h1>
@@ -258,7 +257,6 @@ export function Service4() {
                         and we're here to ensure your success from start to finish. Our team of seasoned program managers
                         has a proven track record of delivering outstanding results.
                         </p>
-                        <h3>We Cover:</h3>
                         <ul>
                         <li>Complex Program Management</li>
                         <li>Project Portfolio Management</li>
@@ -270,11 +268,11 @@ export function Service4() {
                         <h1>#GoToMarketTimely</h1>
                     </div>
                     <div className="serviceImage">
-                        <img src={sample} />
+                        <img src={projmanimg} alt="Agile Project Management"/>
                     </div>
                 </div>
             </div>
-            <div className = "caseStudiesContainer"> 
+            <div className = "caseStudiesContainer1"> 
                 <h2> Case Studies </h2>
                 <div className="caseStudies">
                 <Link
@@ -325,7 +323,7 @@ export function Service5() {
                     </p>
                 </div>
                 <div className="serviceImage">
-                    <img src={sample} />
+                    <img src={staffimg} alt="Staff Augmentation"/>
                 </div>
             </div>
         </div>

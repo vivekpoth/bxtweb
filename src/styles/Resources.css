@@ -13,6 +13,7 @@
     margin-bottom: 20px;
     margin-top: 80px;
     color: #003F63;
+    max-width: 100%;
   }
   
   .caseStudiesList {
@@ -72,10 +73,21 @@
     max-width: 400px;
     text-align: center;
   }
+
+  .thankYouMessage {
+    background-color: lightgreen;
+    padding: 10px;
+    text-align: center;
+  }
   
+  @media screen and (max-width: 1500px) {
+    .caseStudy h3 {
+      font-size: 20px; /* Reduce the font size for laptop screens */
+    }
+  }
   
   /* Responsive styles (customize as needed) */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     .caseStudy {
       width: calc(50% - 20px);
     }
@@ -84,6 +96,11 @@
   @media screen and (max-width: 480px) {
     .caseStudy {
       width: 100%;
+    }
+
+    .service {
+      margin-bottom: 30px;
+      margin-left: 10px;
     }
   }
 

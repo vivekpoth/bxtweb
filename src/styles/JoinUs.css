@@ -1,48 +1,132 @@
 .joinUsPage {
-    background-color: #F1F5F9; /* Set your desired background color */
-    padding: 40px;
-    text-align: center;
-  }
+  background-color: #F1F5F9; /* Set your desired background color for the entire page */
+  padding: 1px;
+  padding-top: 50px;
+  text-align: center;
+}
 
-  .joinUsPage h1 {
-    font-size: 26px;
-    color: #000000; /* Set your desired text color */
-    margin-bottom: 20px;
-  }
-  
-  .joinUsContainer {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff; /* Set your desired background color */
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-  }
-  
-  .joinUsContainer h1 {
-    font-size: 28px;
-    color: #333; /* Set your desired text color */
-    margin-bottom: 20px;
-    
-  }
-  
-  .joinUsContainer h2 {
-    font-size: 24px;
-    color: #333; /* Set your desired text color */
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .joinUsContainer p {
-    font-size: 18px;
-    color: #000000; /* Set your desired text color */
-    margin-bottom: 15px;
-  }
-  
-  .joinUsContainer ul {
-    font-size: 18px;
-    color: #000000; /* Set your desired text color */
-    margin-left: 20px;
-  }
-  
+.openSec {
+  background-color: #ffffff; /* Set your desired background color for the entire page */
+  padding: 40px;
+  text-align: center;
+}
+
+.joinUsPage h1 {
+  font-size: 26px;
+  color: #000000; /* Set your desired text color */
+  padding-bottom: 20px;
+}
+
+.joinUsContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.joinUsContainer h1 {
+  font-size: 28px;
+  color: #000000; /* Set your desired text color */
+  margin-bottom: 20px;
+}
+
+.joinUsContainer h2 {
+  font-size: 24px;
+  color: #333; /* Set your desired text color */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.joinUsContainer p {
+  font-size: 18px;
+  color: #000000; /* Set your desired text color */
+  margin-bottom: 20px;
+}
+
+.joinUsContainer ul {
+  font-size: 18px;
+  color: #000000; /* Set your desired text color */
+}
+
+.openingsContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.openingsContainer h1 {
+  font-size: 28px;
+  color: #333; /* Set your desired text color */
+  margin-bottom: 20px;
+}
+
+.openingsContainer h2 {
+  font-size: 24px;
+  color: #333; /* Set your desired text color */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.openingsContainer p {
+  font-size: 18px;
+  color: #000000; /* Set your desired text color */
+  margin-bottom: 20px;
+}
+
+.openingsContainer ul {
+  font-size: 18px;
+  color: #000000; /* Set your desired text color */
+}
+
+.openingsContainer .openPositions {
+  margin-top: 30px;
+}
+
+.openingsContainer .openPositions h2 {
+  font-size: 42px;
+  color: #333; /* Set your desired text color */
+  margin-bottom: 30px;
+}
+
+.openingsContainer .openPositions ul {
+  font-size: 18px;
+  color: #000000; /* Set your desired text color */
+  list-style-type: none;
+  padding: 0;
+}
+
+.openingsContainer .openPositions li {
+  margin-bottom: 10px;
+}
+
+.openingsContainer .openPositions .positionContainer {
+  background-color: #ffffff; /* Set your desired background color for positionContainer in openingsContainer */
+  border-radius: 8px;
+  border: 1px solid #ccc; 
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.openingsContainer .openPositions .positionContainer:hover {
+  background-color: #e4fcff; /* Set your desired background color on hover */
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.openingsContainer .openPositions .positionContainer h3 {
+  font-size: 20px;
+  color: #333; /* Set your desired text color */
+  margin-bottom: 10px;
+}
+
+.openingsContainer .openPositions .positionContainer p {
+  font-size: 16px;
+  color: #555; /* Set your desired text color */
+  margin-bottom: 20px;
+}

@@ -1,0 +1,47 @@
+.jobDescriptionPage {
+  background-color: #f1f5f9;
+  padding: 40px;
+  text-align: center;
+}
+
+.jobDescriptionPage h1 {
+  font-size: 32px;
+  color: #000000;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.jobDescription {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.jobDescription p {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.jobDescription .section {
+  margin-bottom: 30px;
+}
+
+.jobDescription h2 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.jobDescription ul {
+  font-size: 18px;
+  color: #000000;
+  list-style-type: disc; /* Use 'disc' for bullet points */
+  padding: 0; /* Remove default padding */
+  margin-left: 20px; /* Add a left margin for indentation */
+}
+
+.jobDescription li {
+  margin-bottom: 10px;
+}

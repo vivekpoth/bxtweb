@@ -1,6 +1,6 @@
 .who {
   padding: 50px 15px;
-  background: linear-gradient(to bottom, #63a7d4, #114766);
+  background: linear-gradient(to bottom, #63a7d4, #003F63);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,22 +15,19 @@
 }
 
 .heading-card {
-  width: 300px; /* Adjust width as needed */
-  background-color: #003F63;
+  width: 500px; /* Adjust width as needed */
   padding: 5px;
-  margin: 20px 0 30px;
   border-radius: 10px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
 .heading-card h2 {
-  font-size: 38px;
+  font-size: 60px;
   color: #ffffff;
 }
 
 .content {
-  max-width: 1600px;
+  max-width: 1800px;
 }
 
 .cardWho h2 {
@@ -39,14 +36,16 @@
 
 .cards-container {
   display: flex;
-  margin: auto
+  margin: auto;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 
 .cardWho {
-  flex-basis: calc(50% - 20px); /* 50% minus margin and padding */
+  flex: 0 0 calc(60% - 20px); /* 50% minus margin and padding */
   background-color: #FFFFFF;
   padding: 20px;
-  margin: 0 auto; /* Horizontally center the card within the container */
+  margin: 0 50px; /* Horizontally center the card within the container */
   margin-bottom: 20px; /* Add margin for spacing between cards */
   border-radius: 10px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
@@ -76,14 +75,15 @@
 
 /* Center the side image container with the remaining space on smaller screens */
 @media (max-width: 800px) {
-  .side-image-container {
-    max-width: 100%; /* Allow the image to take full width on small screens */
-    margin-right: 0;
-    margin-bottom: 20px;
+  .cards-container {
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    justify-content: center; /* Center-align the cards */
+    padding: 0 10px; /* Add some horizontal padding for cards on small screens */
   }
 
-  .cards-container {
-    padding: 0 15px; /* Add some horizontal padding for cards on small screens */
+  .cardWho {
+    flex: 0 0 calc(100% - 20px); /* Make cards take up 100% width on smaller screens */
+    margin: 0 0 20px; /* Add margin for spacing between cards */
   }
 }
 
